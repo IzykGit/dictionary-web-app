@@ -16,7 +16,8 @@ const App = () => {
     const [words, setWords] = useState([])
     const [wordQuery, setWordQuery] = useState("")
 
-
+    const [inputError, setInputError] = useState(false)
+    const [searchFail, setSearchFail] = useState(false)
     
 
     useEffect(() => {
@@ -28,13 +29,18 @@ const App = () => {
     const fetchWord = async (event) => {
         event.preventDefault()
 
+        if(wordQuery.length === 0) {
+            setInputError(true)
+            return;
+        }
+
         try {
             const response = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${wordQuery}`)
             setWords(response.data)
         }
         catch (error) {
             console.log(error)
-            
+            setSearchFail(true)
         }
     }
 
@@ -63,10 +69,16 @@ const App = () => {
             </div>
         </header>
         <main>
-            <form onSubmit={fetchWord}>
-                <input type="text" placeholder="software" aria-label="Search Query" onChange={e => setWordQuery(e.target.value)} />
-                <button type="sumit" aria-label="Search"></button>
-            </form>
+            <div className="form-container">
+                <form onSubmit={fetchWord}>
+                    <input className={inputError ? "form-input-error" : "form-input"} type="text"
+                    placeholder="software" aria-label="Search Query" onChange={e => { setWordQuery(e.target.value); setInputError(false) }} />
+                    <button type="sumit" aria-label="Search"></button>
+                </form>
+
+                {inputError && <p className="input-error">{`Whoops, can't be empty...`}</p>}
+            </div>
+
 
             {words && (
             
@@ -129,6 +141,16 @@ const App = () => {
 
                     </>
                 ))
+            )}
+
+            {searchFail && (
+                <section className="search-failure">
+                    <h1>&#128533;</h1>
+                    <h2>No Definitions Found</h2>
+
+                    <p>{`Sorry pal, we couldn't find definitions for the word you were looking for. 
+                    You can try the search again at later time or head to the web instead.`}</p>
+                </section>
             )}
 
         </main>

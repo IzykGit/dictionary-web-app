@@ -66,7 +66,7 @@
   
     gap: 0.5rem;
   
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 1vw, 2rem);
     font-weight: bold;
   
     cursor: pointer;
@@ -110,7 +110,7 @@
     cursor: pointer;
     transition: 0.2s;
 
-    font-size: 1.125rem;
+    font-size: clamp(0.8rem, 0.8vw, 2rem);
     font-weight: 700;
 }
 
@@ -161,6 +161,11 @@ main {
     box-sizing: border-box;
 }
 
+.input-error {
+    color: #FF5252;
+    font-size: clamp(0.8rem, 1vw, 2rem);
+}
+
 form {
     width: 100%;
     border-radius: 1rem;
@@ -174,23 +179,41 @@ form {
     background-color: #2d2d2d;
 }
 
-form > input {
+.form-input {
     height: 100%;
     width: 100%;
-
+  
     padding: 0rem 1.5rem;
     box-sizing: border-box;
-
+  
     outline: none;
-    border: 1px solid #2d2d2d;
+    border: 1px solid #1F1F1F;
     border-radius: 1rem;
-
-    font-size: 1.25rem;
+  
+    font-size: clamp(1rem, 1vw, 2rem);
     color: white;
     font-weight: 700;
-
-    background-color: #2d2d2d;
-}
+  
+    background-color: #1F1F1F;
+  }
+  
+  .form-input-error {
+    height: 100%;
+    width: 100%;
+  
+    padding: 0rem 1.5rem;
+    box-sizing: border-box;
+  
+    outline: none;
+    border: 1px solid #FF5252;
+    border-radius: 1rem;
+  
+    font-size: clamp(0.8rem, 1vw, 2rem);
+    color: white;
+    font-weight: 700;
+  
+    background-color: #1F1F1F;
+  }
 
 
 form > button  {
@@ -369,3 +392,87 @@ form > input:focus {
 }
   
   
+
+
+
+
+
+
+.search-failure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.75rem;
+  
+    text-align: center;
+    color: #2d2d2d;
+}
+  
+.search-failure > h1 {
+    font-size: 5rem;
+    margin: 0;
+}
+  
+.search-failure > h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: white;
+}
+  
+.search-failure > p {
+    margin: 0;
+    font-size: 1.125rem;
+    color: #757575;
+}
+
+
+
+
+
+
+@media screen and (max-width: 750px) {
+    .header {
+      width: 30rem;
+      padding: 0;
+    }
+  
+    main {
+      width: 30rem;
+      padding: 0;
+      
+    }
+  }
+  
+  
+  @media screen and (max-width: 500px) {
+    .header {
+      width: 20rem;
+    }
+  
+    main {
+      width: 20rem;
+    }
+    
+  }
+  
+  
+  
+@media screen and (max-width: 350px) {
+    .header {
+      width: 15rem;
+    }
+  
+  
+    .selectors {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+  
+    main {
+        width: 15rem;
+    }
+    
+}
+
+
