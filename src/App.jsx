@@ -60,7 +60,7 @@ const App = () => {
         <>
         <FontProvider>
         <header className="header">
-            <img src="/assets/images/logo.svg"/>
+            <img src="/assets/images/logo.svg" alt="Dictionary"/>
 
             <div className="selectors">
                 <FontSelector />
@@ -75,7 +75,7 @@ const App = () => {
                     placeholder="software" aria-label="Search Query" onChange={e => { setWordQuery(e.target.value); setInputError(false) }} />
 
                     <button type="sumit" aria-label="Search">
-                        <img src="/assets/images/icon-search.svg"/>
+                        <img src="/assets/images/icon-search.svg" alt=""/>
                     </button>
                 </form>
 

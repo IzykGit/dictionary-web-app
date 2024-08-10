@@ -27,7 +27,7 @@ const ModeSelector = () => {
     }
     return (
         <div className="theme_indicator">
-            <motion.button onClick={toggleTheme} className={theme === "light" ? "theme_button" : "theme_button_dark"}>
+            <motion.button onClick={toggleTheme} className={theme === "light" ? "theme_button" : "theme_button_dark"} >
                 <motion.div variants={indicator} animate={theme}/>
             </motion.button>
 

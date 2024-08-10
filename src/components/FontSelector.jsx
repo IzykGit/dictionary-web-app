@@ -29,7 +29,7 @@ const FontSelector = () => {
 
     return (
         <>
-        <div role='select' className="selector_selector" onClick={() => setDropDown(!dropDown)}>
+        <div className="selector_selector" onClick={() => setDropDown(!dropDown)}>
             <p style={fontStyle}>{currentFont}</p>
             <img src='/assets/images/icon-arrow-down.svg' alt='' className={!dropDown ? "selector_img" : "selector_img_rotate" }/>
         </div>
