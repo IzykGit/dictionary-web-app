@@ -73,7 +73,10 @@ const App = () => {
                 <form onSubmit={fetchWord}>
                     <input className={inputError ? "form-input-error" : "form-input"} type="text"
                     placeholder="software" aria-label="Search Query" onChange={e => { setWordQuery(e.target.value); setInputError(false) }} />
-                    <button type="sumit" aria-label="Search"></button>
+
+                    <button type="sumit" aria-label="Search">
+                        <img src="/assets/images/icon-search.svg"/>
+                    </button>
                 </form>
 
                 {inputError && <p className="input-error">{`Whoops, can't be empty...`}</p>}

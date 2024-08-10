@@ -215,21 +215,24 @@ form {
     background-color: #1F1F1F;
   }
 
-
+  
 form > button  {
     height: 2rem;
     width: 2rem;
-
+  
     border: none;
-
     background-color: transparent;
-    background-image: url(../public/assets/images/icon-search.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-
+  
+    display: flex;
+    align-items: center;
+  
     cursor: pointer;
     position: absolute;
     transform: translateX(-1.5rem);
+}
+  
+form > button > img {
+    width: 1.5rem;
 }
 
 

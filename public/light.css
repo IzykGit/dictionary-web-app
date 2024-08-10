@@ -231,15 +231,18 @@ form > button  {
   width: 2rem;
 
   border: none;
-
   background-color: transparent;
-  background-image: url(../public/assets/images/icon-search.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
 
   cursor: pointer;
   position: absolute;
   transform: translateX(-1.5rem);
+}
+
+form > button > img {
+  width: 1.5rem;
 }
 
 
