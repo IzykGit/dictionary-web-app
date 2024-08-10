@@ -1,0 +1,371 @@
+
+
+
+
+
+/* theme button styles */
+
+.theme_indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.theme_indicator > svg {
+    stroke: #8F19E8;
+    stroke-width: 1.5px;
+}
+  
+
+.theme_button_dark {
+    height: 1.5rem;
+    width: 2.5rem;
+  
+    border: none;
+  
+    padding: 0.25rem;
+    border-radius: 1rem;
+  
+    display: flex;
+    align-items: center;
+  
+    background-color: #A445ED;
+  
+    cursor: pointer;
+}
+  
+.theme_button_dark > div {
+    background-color: white;
+  
+    height: 1rem;
+    width: 1rem;
+  
+    border-radius: 1rem;
+}
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+/* Font selector styles */
+
+.selector_selector {
+    height: 3rem;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    gap: 0.5rem;
+  
+    font-size: 1rem;
+    font-weight: bold;
+  
+    cursor: pointer;
+    position: relative;
+  
+    text-align: right;
+
+    color: white;
+}
+  
+.selector_img {
+    transform: rotate(0);
+    transition: 0.2s;
+}
+
+.selector_img_rotate {
+    transform: rotate(180deg);
+    transition: 0.2s;
+}
+
+
+.selector_dropDown {
+    position: absolute;
+
+    z-index: 10;
+
+    background: white;
+    box-shadow: 0px 0px 28px 3px hsl(274, 82%, 60%, 0.5);
+    opacity: 0;
+
+    visibility: hidden;
+    top: 7rem;
+
+    border-radius: 1rem;
+
+    width: 10rem;
+}
+
+.selector_dropDown p {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.selector_dropDown p:hover {
+    color: #A445ED;
+}
+  
+
+
+
+
+
+
+
+
+
+
+/* App.jsx page styles */
+
+.header {
+    padding: 0rem 1rem;
+    margin: 3.25rem 0rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.selector-border {
+    height: 2rem;
+    border: 1px solid #E9E9E9;
+}
+
+.selectors {
+    display: flex;
+    align-items: center;
+    gap: 1.65rem;
+}
+
+main {
+    width: 46.0625rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.6875rem;
+
+    padding: 0rem 1rem;
+    box-sizing: border-box;
+}
+
+form {
+    width: 100%;
+    border-radius: 1rem;
+  
+    height: 4rem;
+  
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  
+    background-color: #2d2d2d;
+}
+
+form > input {
+    height: 100%;
+    width: 100%;
+
+    padding: 0rem 1.5rem;
+    box-sizing: border-box;
+
+    outline: none;
+    border: 1px solid #2d2d2d;
+    border-radius: 1rem;
+
+    font-size: 1.25rem;
+    color: white;
+    font-weight: 700;
+
+    background-color: #2d2d2d;
+}
+
+
+form > button  {
+    height: 2rem;
+    width: 2rem;
+
+    border: none;
+
+    background-color: transparent;
+    background-image: url(../public/assets/images/icon-search.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+    position: absolute;
+    transform: translateX(-1.5rem);
+}
+
+
+form > input:focus {
+    border: 1px solid #A445ED;
+    caret-color: #A445ED;
+}
+
+
+
+
+
+.word-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.play-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+}
+
+.play-button:active {
+    transform: scale(1);
+}
+
+
+
+
+.found-word > * {
+    margin: 0;
+}
+
+.found-word > h1 {
+    font-size: 4rem;
+    color: white;
+}
+
+.found-word > p {
+    font-size: 1.5rem;
+    color: #A445ED;
+}
+
+
+
+
+
+.part-of-speech > h2 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #e9e9e9;
+}
+
+.part-of-speech > h3 {
+    font-size: 1.25rem;
+    color: #757575;
+    font-weight: 400;
+}
+
+.definition-list {
+    margin: 0;
+}
+
+.definition-list > li {
+    margin: 0.8125rem 0rem;
+
+    font-size: 1.05rem;
+    line-height: 1.5rem;
+    color: white;
+}
+
+.definition-list > li::marker {
+    color: #8F19E8;
+}
+
+.example {
+    color: #757575;
+    font-size: 1.125rem;
+}
+
+
+
+
+.synonyms {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.synonyms > h3 {
+    font-size: 1.25rem;
+    color: #757575;
+    font-weight: 400;
+
+}
+
+.synonyms > p {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #A445ED;
+
+    margin: 0;
+
+    cursor: pointer;
+
+}
+
+.synonyms > p:hover {
+    text-decoration: underline;
+}
+
+
+
+.url-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+
+    font-size: 0.875rem;
+    font-weight: 400;
+
+    text-decoration: underline;
+    margin-bottom: 5rem;
+}
+
+.url-section > h4 {
+    font-weight: 400;
+    color: #757575;
+    text-decoration-color: #757575;
+
+    margin: 0;
+    line-height: 1rem;
+}
+
+.url {
+    margin: 0;
+    line-height: 1rem;
+    color: white;
+}
+  
+  
